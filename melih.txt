@@ -1,0 +1,89 @@
+"""
+1️⃣ PyQt6.QtWidgets
+
+Arayüz elemanlarının (widget’ların) bulunduğu kütüphane.
+“Widget” = Görsel bileşen demektir.
+
+🔹 İçerdiği başlıca sınıflar:
+
+QWidget → Her pencerenin temel sınıfı. (Her şey bunun üstüne kurulur.)
+
+QPushButton → Buton oluşturmak için.
+
+QLabel → Yazı veya resim göstermek için.
+
+QLineEdit → Kullanıcının metin girmesi için.
+
+QComboBox, QCheckBox, QRadioButton → Seçim bileşenleri.
+
+QVBoxLayout, QHBoxLayout, QGridLayout → Bileşenleri düzenli yerleştirmek için.
+
+Yani kısaca:
+👉 QtWidgets = Görsel arayüz elemanlarını yöneten kütüphane.
+
+2️⃣ PyQt6.QtCore
+
+Arka plan işlemlerini yöneten “beyin” kısmı.
+
+🔹 Ne işe yarar:
+
+Zamanlama, sinyal-slot (event) sistemini kontrol eder.
+
+QTimer → belirli aralıklarla işlem çalıştırır.
+
+QObject → bütün sınıfların temeli.
+
+QThread → çoklu iş parçacığı (multithreading) sağlar.
+
+QDateTime, QFile, QSettings gibi sınıflar da burada.
+
+Yani:
+👉 QtCore = Mantık, zamanlama, veri, olay yönetimi kısmı.
+
+3️⃣ PyQt6.QtGui
+
+Görseller, renkler, yazı tipleri ve simgelerle ilgilenir.
+
+🔹 Ne işe yarar:
+
+QIcon → simge oluşturmak (örneğin butonlara veya pencereye ikon eklemek).
+
+QFont → yazı tipi ve boyutlarını ayarlamak.
+
+QPixmap / QImage → resim işlemleri.
+
+QPainter → çizim yapmak (örneğin grafik, şekil, el yazısı gibi).
+
+Yani:
+👉 QtGui = Görsel detaylar ve çizim işlemleri.
+
+4️⃣ PyQt6.QtMultimedia (isteğe bağlı)
+
+Ses, mikrofon, kamera gibi medya işlemlerinde kullanılır.
+AIMI’de bu özellikle kameradan görüntü alma kısmında işimize yarayacak.
+
+5️⃣ PyQt6.QtNetwork
+
+Ağ işlemleri (örneğin sunucuya bağlanma, veri gönderme, socket haberleşmesi).
+
+6️⃣ PyQt6.uic
+
+.ui dosyalarını (Qt Designer’da yapılan tasarımlar) Python koduna çevirmek için kullanılır.
+"""
+
+""" 
+🔧 Örnek benzetme:
+
+Diyelim ki bir restoran açıyoruz.
+
+Restoranın kendisi → uygulamanız
+
+Garsonlar, müşteriler, mutfak → pencere, buton, kullanıcı etkileşimi
+
+Mutfaktaki sipariş sistemini yöneten “ana bilgisayar” → QApplication
+
+Yani garson (buton) siparişi alır → bu olay önce QApplication’a gider →
+o da “hangi fonksiyon çalışacak?” diye karar verir.
+
+QApplication olmasa, butonlar ne yapacağını bilmez, sistem “kimin dinleyeceğini” anlayamaz.
+"""
